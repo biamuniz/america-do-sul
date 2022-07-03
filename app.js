@@ -5,9 +5,9 @@ let mapaDados;
 // para indicar que ela vai esperar o carregamento
 async function loadMapData(){
     // endereço do SVG da América do Sul
-    let mapaUrl = 'mapa-conteudo.svg'
+    let mapaUrl = 'imagens/mapa-conteudo.svg'
     // Dados de celulares
-    let dadosUrl='dados.json';
+    let dadosUrl='dados/dados.json';
 
     // carrega o arquivo do mapa SVG
     let mapaSvg = await fetch(mapaUrl);
@@ -25,9 +25,12 @@ async function loadMapData(){
     elemPaises.forEach((elemento) => {
         let opacity = mapaDados[0].opacidade 
         elemento.dataset.indice = opacity; // adiciona esse índice aos atributos do elemento
-
-        // determina a opacidade de cor do preenchimento de acordo com o índice
+        let cor = mapaDados[0].espectro 
+        elemento.dataset.indice = cor; // adiciona esse índice aos atributos do elemento
+        
+        // determina a opacidade e cor do preenchimento de acordo com o índice
         elemento.setAttribute('fill-opacity', elemento.dataset.indice);
+        elemento.setAttribute('fill-color', elemento.dataset.indice);
         // determina a função a executar no mouseover
         elemento.onmouseover = marcaPais;
         // determina a função a executar no mouseout
@@ -38,17 +41,18 @@ async function loadMapData(){
 function marcaPais(event){
     // seleciona o alvo do evento (o vetor do país)
     let elemento = event.target;
-    // pega o atributo id do elemento, que tem o nome do país em letra minúscula
+    // pega o atributo id do elemento
     let codigoAlvo = elemento.id;
-    // let codigo = dados.properties.codarea;
     let dadosPais = mapaDados.filter(function(item){
         return item.id === codigoAlvo;
     });
 
     // pega o nome do país do json
-    let nome = dadosPais[0].nome;
-    // pega a quantidade de celulares por 100 pessoas
-    let mobile = dadosPais[0].mobile;
+    let pais = dadosPais[0].país;
+    // pega o início do mandato atual
+    let inicio = dadosPais[0].mandato;
+    // pega o nome do presidente
+    let nome = dadosPais[0].presidente;
 
     // tira a classe 'ativo' da seleção anterior, se houver
     let selecaoAnterior = document.querySelector('path.ativo');
@@ -58,8 +62,8 @@ function marcaPais(event){
     elemento.classList.add("ativo");
 
     // preenche os elementos com nome, mobile cellular subscriptions e o índice
-    document.querySelector('#pais-titulo').textContent = nome + " has " + mobile + "mobile cellular subscriptions (per 100 people) in 2019";
-    document.querySelector('#pais-valor').textContent = "índice: " + elemento.dataset.indice;
+    document.querySelector('#pais-titulo').textContent = pais + " tem como atual presidente " + nome;
+    document.querySelector('#pais-valor').textContent = "Seu mandato começou em " + inicio;
 }
 
 function desmarcaPais(event){
