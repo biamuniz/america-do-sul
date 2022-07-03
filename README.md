@@ -1,5 +1,5 @@
 # [A nova onda na América do Sul](https://biamuniz.github.io/america-do-sul/)
-Mini-projeto no formato de mapa desenvolvido por Bianca Muniz para a disciplina Datavis Studio II, do Master em Jornalismo de Dados, Automação e Data Storytelling do Insper.
+Mini-projeto no formato de mapa desenvolvido para a disciplina Datavis Studio II, do Master em Jornalismo de Dados, Automação e Data Storytelling do Insper.
 
 
 ## Objetivos de aprendizagem
