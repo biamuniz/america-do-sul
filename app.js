@@ -6,14 +6,14 @@ let mapaDados;
 async function loadMapData(){
     // endereço do SVG da América do Sul
     let mapaUrl = 'imagens/mapa-conteudo.svg'
-    // Dados de celulares
+    // Dados sobre presidentes, atual mandato e espectro político
     let dadosUrl='dados/dados.json';
 
     // carrega o arquivo do mapa SVG
     let mapaSvg = await fetch(mapaUrl);
     // converte os dados carregados para o formato de string
     mapaContinente = await mapaSvg.text();
-    // carrega o arquivo de dados de celulares
+    // carrega o arquivo com os dados dos países
     let dadosJson = await fetch(dadosUrl);
     mapaDados = await dadosJson.json();
 
@@ -61,7 +61,7 @@ function marcaPais(event){
     // adiciona a classe 'ativo' ao elemento atual
     elemento.classList.add("ativo");
 
-    // preenche os elementos com nome, mobile cellular subscriptions e o índice
+    // preenche os elementos com nome do país, presidente atual e início do mandato
     document.querySelector('#pais-titulo').textContent = pais + " tem como atual presidente " + nome;
     document.querySelector('#pais-valor').textContent = "Seu mandato começou em " + inicio;
 }
