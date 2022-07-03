@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ARG",
+    "país": "Argentina",
+    "presidente": "Alberto Fernández",
+    "espectro": "#ff0000",
+    "mandato": 2019,
+    "opacidade": 0.4
+  },
+  {
+    "id": "BOL",
+    "país": "Bolívia",
+    "presidente": "Luis Arce",
+    "espectro": "#ff0000",
+    "mandato": 2020,
+    "opacidade": 0.6
+  },
+  {
+    "id": "BRA",
+    "país": "Brasil",
+    "presidente": "Jair Bolsonaro",
+    "espectro": "#1f53fa",
+    "mandato": 2019,
+    "opacidade": 0.4
+  },
+  {
+    "id": "CHL",
+    "país": "Chile",
+    "presidente": "Gabriel Boric",
+    "espectro": "#ff0000",
+    "mandato": 2022,
+    "opacidade": 1
+  },
+  {
+    "id": "COL",
+    "país": "Colômbia",
+    "presidente": "Iván Duque",
+    "espectro": "#1f53fa",
+    "mandato": 2018,
+    "opacidade": 0.2
+  },
+  {
+    "id": "ECU",
+    "país": "Equador",
+    "presidente": "Guillermo Lasso",
+    "espectro": "#1f53fa",
+    "mandato": 2021,
+    "opacidade": 0.8
+  },
+  {
+    "id": "GUY",
+    "país": "Guiana",
+    "presidente": "Irfaan Ali",
+    "espectro": "#ff0000",
+    "mandato": 2020,
+    "opacidade": 0.6
+  },
+  {
+    "id": "PER",
+    "país": "Peru",
+    "presidente": "Pedro Castillo",
+    "espectro": "#ff0000",
+    "mandato": 2021,
+    "opacidade": 0.8
+  },
+  {
+    "id": "PRY",
+    "país": "Paraguai",
+    "presidente": "Mario Benítez",
+    "espectro": "#1f53fa",
+    "mandato": 2018,
+    "opacidade": 0.2
+  },
+  {
+    "id": "SUR",
+    "país": "Suriname",
+    "presidente": "Chan Santokhi",
+    "espectro": "#ff0000",
+    "mandato": 2020,
+    "opacidade": 0.6
+  },
+  {
+    "id": "URY",
+    "país": "Uruguai",
+    "presidente": "Luis Lacalle Pou",
+    "espectro": "#1f53fa",
+    "mandato": 2020,
+    "opacidade": 0.6
+  },
+  {
+    "id": "VEM",
+    "país": "Venezuela",
+    "presidente": "Nicolás Maduro",
+    "espectro": "#ff0000",
+    "mandato": 2018,
+    "opacidade": 0.2
+  }
+]
